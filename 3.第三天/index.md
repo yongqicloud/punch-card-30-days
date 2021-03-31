@@ -2,6 +2,7 @@
 
 在绝大多数情况下，函数的调用方式决定了 this 的值（运行时绑定）
 
+
 1、若一个函数由函数名直接调用，则该函数作用域内部的this值得是全局对象（浏览器环境为window， nodejs为global），如：
 ```js
 function foo () {
@@ -53,9 +54,11 @@ var globalObject = this;
 var foo = (() => this);
 console.log(foo() === globalObject); // true
 ```
+
+详细参考mdn https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this
+
+
 > 二、如何中断ajax请求？
-> 可参考mdn或者
-https://segmentfault.com/a/1190000037636695
 
 1、如果该请求已被发出，XMLHttpRequest.abort() 方法将终止该请求。当一个请求被终止，它的  readyState 将被置为 XMLHttpRequest.UNSENT (0)，并且请求的 status 置为 0。
 ```js
@@ -95,3 +98,4 @@ function fetchVideo() {
 }
 
 ```
+可参考mdn或者 https://segmentfault.com/a/1190000037636695
