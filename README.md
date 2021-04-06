@@ -27,6 +27,11 @@
 
   5-2、Promise.allSettled 了解吗？动手实现一下 Promise.allSettled?
 
+- [x] 第六天
+
+  6-1、vue 中组件间有那些通信方式？
+  
+  6-2、vue 中 v-show 和 v-if 的区别是什么？
 
 
 
