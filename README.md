@@ -63,6 +63,12 @@
 
   11-2、如何判断当前脚本运行在浏览器还是node环境中？
 
+- [x] 第十二天
+  
+  12-1、请描述一下cookies sessionStorage和localstorage区别
+
+  12-2、介绍一下 node 常用模块，并且详细介绍下 Stream?
+
 
 
 
