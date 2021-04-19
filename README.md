@@ -62,6 +62,11 @@
   11-1、有没有写过 Koa 中间件，说下中 间件原理，介绍下自己写过的中间件?
 
   11-2、如何判断当前脚本运行在浏览器还是node环境中？
+- [x] 第十二天
+
+  12-1、Token 一般是存放在哪里? Token 放在 cookie 和放在localStorage、sessionStorage 中有什么不同?
+
+  12-2、WebSocket 是怎么实现点对点通信和广播通信的？
 
 
 
