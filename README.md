@@ -127,6 +127,12 @@
   20-1、Vue3 中 Teleport 的作用是什么？
   
   20-2、说一下vue3的composition api?
+  
+- [x] 第二十一天
+
+  21-1、vue3中v-model的变化有哪些?
+  
+  21-2、说一下 Vue3 与 Vue2 的对比?
 
 
 
