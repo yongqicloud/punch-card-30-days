@@ -64,6 +64,7 @@
   11-2、如何判断当前脚本运行在浏览器还是node环境中？
 
 - [x] 第十二天
+<<<<<<< HEAD
 
   12-1、Token 一般是存放在哪里? Token 放在 cookie 和放在localStorage、sessionStorage 中有什么不同?
 
@@ -75,6 +76,18 @@
 
   12-2、说一下 CORS 的简单请求和复杂请求的区别?
 
+=======
+  
+  12-1、请描述一下cookies sessionStorage和localstorage区别
+
+  12-2、介绍一下 node 常用模块，并且详细介绍下 Stream?
+
+- [x] 第十三天
+  
+  13-1、Node 如何和 MySQL 进行通信
+
+  13-2、浏览器为什么要阻止跨域请求? 如何解决跨域?每次跨域请求都需要 到达服务端吗?(快手)？
+>>>>>>> ba3c8328067ce6e2868965180eeeddace9be7a8f
 
 
 

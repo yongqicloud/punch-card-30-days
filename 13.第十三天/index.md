@@ -1,37 +1,46 @@
-> 一、客户端缓存有几种方式?浏览器出现 from disk、from memory 的 策略是啥?
 
-策略是强缓存
-
-from disk是在本地硬盘里，而from memory是在内存里面
+> Node 如何和 MySQL 进行通信
 
 
-> 二、说一下 CORS 的简单请求和复杂请求的区别?
+1、首先安装mysql模块
+```shell
+cnpm install mysql
+```
+2、通过mysql模块的api开启连接。
+```js
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : '123456',
+  database : 'test'
+});
+ 
+connection.connect();
+ 
+connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
+  if (error) throw error;
+  console.log('The solution is: ', results[0].solution);
+});
+```
+> 浏览器为什么要阻止跨域请求? 如何解决跨域? 每次跨域请求都需要 到达服务端吗?(快手)
 
-#### 简单请求
+现代浏览器出于安全考虑，都会去遵守一个叫做“同源策略”的约定，同源的意思是两个地址的协议、域名、端口号都相同的情况下，才叫同源。这个时候两个地址才可以相互访问 cookie、localStorage、sessionStorage、发送 ajax 请求，如果三者有一个不同，就是不同源，这时再去访问这些资源就叫做跨域。
 
-（1) 请求方法是以下三种方法之一：
+解决跨域：
 
-HEAD
-GET
-POST
-（2）HTTP的头信息不超出以下几种字段：
+  jsonp，
 
-Accept
-Accept-Language
-Content-Language
-Last-Event-ID
-Content-Type：只限于三个值application/x-www-form-urlencoded、multipart/form-data、text/plain
+  使用`<img />`、`<script />`、`<link />`等标签的src属性可以不被跨域拦截。
 
-#### 非简单请求
+  postMessage
 
-非简单请求是那种对服务器有特殊要求的请求，比如请求方法是`PUT`或`DELETE`，或者Content-Type字段的类型是application/json。
+  服务器设置
 
-非简单请求的CORS请求，会在正式通信之前，增加一次HTTP查询请求，称为"预检"请求（preflight）。
+  WebSocket协议跨域
 
-浏览器先询问服务器，当前网页所在的域名是否在服务器的许可名单之中，以及可以使用哪些HTTP动词和头信息字段。只有得到肯定答复，浏览器才会发出正式的XMLHttpRequest请求，否则就报错
+#### 每次跨域请求都需要 到达服务端吗
 
-"预检"请求用的请求方法是OPTIONS，表示这个请求是用来询问的。头信息里面，关键字段是Origin，表示请求来自哪个源。
+简单请求会直接到达服务端（get、post、head），复杂请求如delete、put会先发出option预检请求，由服务器返回可访问的域名清单和headers等信息。若服务器不同意跨域，则不会发出正式请求。
 
-除了Origin字段，"预检"请求的头信息包括两个特殊字段。
 
-参考链接： https://blog.csdn.net/yexudengzhidao/article/details/100104134

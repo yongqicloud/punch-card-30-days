@@ -1,16 +1,17 @@
-> 一、Token 一般是存放在哪里? Token 放在 cookie 和放在localStorage、sessionStorage 中有什么不同?
 
-1、localStorage
+> 一、请描述一下 cookies sessionStorage和localstorage区别？
 
-优点：没有时间限制的存储，会一直存放在浏览器中。
+cookie是为了解决http请求无状态的缺点，可以通过set-cookie字段设置cookie，通过http请求由服务器发送给浏览器，但浏览器发送ajax请求时会自动携带从服务端获取的cookie用于表明身份。cookie最多可以存储4kb。所以一般用来存储登录等验证用户身份的信息。但是cookie可以被js获取，所以不能存放隐私敏感信息。
 
-缺点：由于LocalStorage 可以被 javascript 访问，所以容易受到XSS攻击。所以可以在一个统一的地方复写请求头，让每次请求都在header中带上这个token， 当token失效的时候，后端会返回401，这个时候在你可以在前端代码中操作返回登陆页面，清除localstorage中的token。（适用于 ajax请求或者 api请求，可以方便的存入 localstorage）另外，需要应用程序来保证Token只在HTTPS下传输。
-
-2、cookie
-
-优点：可以防止 csrf攻击，因为 csrf只能在请求中携带 cookie，而这里必须从 cookie中拿出相应的值并放到 authorization 头中。实际上cookie不能跨站（同源策略）被取出，因此可以避免 csrf 攻击。（适用于 ajax请求或者 api请求，可以方便的设置 。
+sessionStorage和localstorage都是浏览器数据存储方案，不同在于sessionStorage是会话级别存储，关闭网页或者浏览器都会清除；而localStorage是永久存储。其两者最多可以存储5M，且不参与与服务端通信。
 
 
-> 二、WebSocket 是怎么实现点对点通信和广播通信的？
 
-建议先了解一下websocket：https://zhuanlan.zhihu.com/p/74326818·
+> 二、介绍一下 node 常用模块，并且详细介绍下 Stream?
+
+fs文件模块、http模块、os操作系统
+
+流（stream）是 Node.js 中处理流式数据的抽象接口。 stream 模块用于构建实现了流接口的对象。流可以是可读的、可写的、或者可读可写的。 所有的流都是 EventEmitter 的实例。
+
+Node.js 创建的流都是运作在字符串和 Buffer（或 Uint8Array）上。 当然，流的实现也可以使用其它类型的 JavaScript 值（除了 null）。 这些流会以“对象模式”进行操作。当创建流时，可以使用 objectMode 选项把流实例切换到对象模式。 将已存在的流切换到对象模式是不安全的。
+
