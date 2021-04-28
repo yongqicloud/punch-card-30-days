@@ -64,19 +64,6 @@
   11-2、如何判断当前脚本运行在浏览器还是node环境中？
 
 - [x] 第十二天
-<<<<<<< HEAD
-
-  12-1、Token 一般是存放在哪里? Token 放在 cookie 和放在localStorage、sessionStorage 中有什么不同?
-
-  12-2、WebSocket 是怎么实现点对点通信和广播通信的？
-
-- [x] 第十三天
-
-  12-1、客户端缓存有几种方式?浏览器出现 from disk、from memory 的 策略是啥?
-
-  12-2、说一下 CORS 的简单请求和复杂请求的区别?
-
-=======
   
   12-1、请描述一下cookies sessionStorage和localstorage区别
 
@@ -87,7 +74,28 @@
   13-1、Node 如何和 MySQL 进行通信
 
   13-2、浏览器为什么要阻止跨域请求? 如何解决跨域?每次跨域请求都需要 到达服务端吗?(快手)？
+
 >>>>>>> ba3c8328067ce6e2868965180eeeddace9be7a8f
+- [x] 第十四天
+  12-1、Token 一般是存放在哪里? Token 放在 cookie 和放在localStorage、sessionStorage 中有什么不同?
 
+  12-2、WebSocket 是怎么实现点对点通信和广播通信的？
 
+- [x] 第十三天
 
+  12-1、客户端缓存有几种方式?浏览器出现 from disk、from memory 的 策略是啥?
+
+  12-2、说一下 CORS 的简单请求和复杂请求的区别?
+
+- [x] 第十四天
+
+  14-1、Token 一般是存放在哪里? Token 放在 cookie 和放在localStorage、sessionStorage 中有什么不同?
+
+  14-2、WebSocket 是怎么实现点对点通信和广播通信的？
+
+- [x] 第十五天
+
+  15-1、客户端缓存有几种方式?浏览器出现 from disk、from memory 的 策略是啥?
+  
+  15-2、说一下 CORS 的简单请求和复杂请求的区别?
+  
